@@ -8,7 +8,7 @@
       "id": 802,
       "main": "Clouds",
       "description": "scattered clouds",
-      "icon": "03d"
+      "icon": "03n"
     }
   ],
   "base": "stations",
@@ -28,7 +28,7 @@
   "clouds": {
     "all": 40
   },
-  "dt": 1682793270,
+  "dt": 1682795009,
   "sys": {
     "type": 1,
     "id": 1731,

@@ -1,0 +1,43 @@
+{
+  "coord": {
+    "lon": 17.75,
+    "lat": 60
+  },
+  "weather": [
+    {
+      "id": 802,
+      "main": "Clouds",
+      "description": "scattered clouds",
+      "icon": "03d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 4.69,
+    "feels_like": 2.47,
+    "temp_min": 3.73,
+    "temp_max": 4.69,
+    "pressure": 1004,
+    "humidity": 93
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 2.57,
+    "deg": 190
+  },
+  "clouds": {
+    "all": 40
+  },
+  "dt": 1682793270,
+  "sys": {
+    "type": 1,
+    "id": 1731,
+    "country": "SE",
+    "sunrise": 1682736800,
+    "sunset": 1682793554
+  },
+  "timezone": 7200,
+  "id": 2666218,
+  "name": "Uppsala County",
+  "cod": 200
+}

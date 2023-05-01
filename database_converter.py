@@ -11,4 +11,9 @@ def create_postgresql_engine(database, user, password, host, port):
 
 # Save a Pandas DataFrame to a PostgreSQL table.
 def save_dataframe_to_postgresql(df, table_name, engine):
-    df.to_sql(table_name, engine, if_exists='replace', index=False)
+    # Remove all existing records in the table
+    with engine.connect() as connection:
+        connection.execute(f"TRUNCATE TABLE {table_name} RESTART IDENTITY CASCADE")
+    
+    # Save the new DataFrame to the PostgreSQL table
+    df.to_sql(table_name, engine, if_exists='append', index=False)

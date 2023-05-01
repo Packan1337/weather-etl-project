@@ -15,14 +15,6 @@ host = os.getenv("POSTGRES_HOST")
 port = os.getenv("POSTGRES_PORT")
 
 
-API_KEY = "f287254d7f65d11a9be865eeb88e798f"
-database = "WeatherDB"
-user = "packan"
-password = "Ariadencoole1"
-host = "localhost"
-port = "5432"
-
-
 def main():
     all_weather_data = []
 

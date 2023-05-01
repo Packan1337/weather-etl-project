@@ -6,6 +6,10 @@ import matplotlib.pyplot as plt
 
 
 # Fetch weather data for a specific location using the OpenWeatherMap API.
+# The API key and location are specified as function arguments.
+# The API key is stored in a .env file, which is not included in the repository.
+# The location is specified as a string, e.g. "Stockholm".
+# The API returns a JSON response, which is converted to a Python dictionary.
 def fetch_weather_data(api_key, location):
     base_url = "https://api.openweathermap.org/data/2.5/weather"
     payload = {
@@ -15,6 +19,9 @@ def fetch_weather_data(api_key, location):
     }
     response = requests.get(base_url, params=payload)
 
+    # Check if the request was successful.
+    # If the request was successful, the response code will be 200.
+    # If the request failed, the response code will be 404.
     if response.status_code == 200:
         return response.json()
     else:
@@ -22,6 +29,7 @@ def fetch_weather_data(api_key, location):
 
 
 # Save raw and converted weather data as a JSON file in the specified folder.
+# The default folder is 'raw', but you can also specify 'harmonized' or 'converted'.
 def save_data(data, filename, folder='raw', data_type='raw'):
     folder_path = os.path.join(folder, data_type)
     os.makedirs(folder_path, exist_ok=True)
@@ -32,6 +40,8 @@ def save_data(data, filename, folder='raw', data_type='raw'):
 
 
 # Parse and harmonize raw weather data into a format suitable for Pandas and matplotlib.
+# The raw weather data is a nested dictionary, which is difficult to work with.
+# The harmonized weather data is a flat dictionary, which is easier to work with.
 def harmonize_weather_data(raw_data):
     harmonized_data = {
         "location": raw_data["name"],
@@ -46,15 +56,20 @@ def harmonize_weather_data(raw_data):
 
 
 # Convert harmonized weather data to a Pandas DataFrame.
+# This is useful for plotting the data with matplotlib.
+# The DataFrame is also useful for saving the data to a PostgreSQL database.
 def harmonized_data_to_dataframe(harmonized_data):
     data = [harmonized_data]
-    columns = ["location", "weather", "temperature", "humidity", "wind_speed", "timestamp"]
+    columns = ["location", "weather", "temperature",
+               "humidity", "wind_speed", "timestamp"]
     df = pd.DataFrame(data, columns=columns)
 
     return df
 
 
 # Plot temperature, humidity, and wind speed from the weather DataFrame.
+# The plot is useful for comparing weather data from different locations.
+# The plot is saved as a PNG file in the 'plots' folder.
 def plot_weather_data(df):
     fig, ax1 = plt.subplots()
 

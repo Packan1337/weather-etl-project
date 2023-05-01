@@ -1,24 +1,21 @@
-# Weather ETL Pipeline
-
+# Weather Data Analysis Pipeline
 ## Group Members
- - Aria Kalantari
- 
-## Project Explanation
-The Weather ETL Pipeline is designed to retrieve weather forecast data from OpenWeatherMap API and process it to make it suitable for further analysis and visualization. The pipeline follows a series of stages, including raw data download, data harmonization, data cleansing, and data staging. The data is then transformed into SQL tables and can be used for visualization purposes.
+- Aria Kalantari
 
-The pipeline can be scheduled to run daily using Apache Airflow, but it is not actually scheduled in this implementation. The pipeline's primary goal is to enable users to analyze and visualize weather data using Pandas matplotlib effectively.
+## Project Overview
+The Weather Data Analysis Pipeline is a Python-based project that retrieves, processes, and visualizes weather data from multiple cities using the OpenWeatherMap API. The pipeline is comprised of several steps, including data extraction, transformation, loading into a PostgreSQL database, and visualization using matplotlib.
 
-## Ideas for Future Improvements or Additions
-- Upon successfully completing the project as described in the todo list, there are several areas for potential improvements or additions:
+The goal of this project is to enable users to analyze and visualize weather data effectively, providing insights into temperature, humidity, and wind speed trends across various locations.
 
-- Implement the Apache Airflow scheduling feature to automatically run the ETL pipeline daily and update the processed data with new forecasts.
+## Project Structure
+The project is organized into several modules:
 
-- Expand the project to include more weather data sources or APIs, allowing for a more comprehensive and diverse dataset.
+- main.py: The main script that orchestrates the execution of the ETL pipeline and visualization.
+- data_etl_process.py: Contains functions for data extraction, transformation, and visualization.
+- database_converter.py: Handles the connection to the PostgreSQL database and saving the data to the database.
 
-- Develop more advanced visualizations and analyses using the processed data, such as interactive plots, heatmaps, or trend analyses.
-
-- Enhance the pipeline to handle data from multiple locations, allowing users to analyze and compare weather data across different regions.
-
-- Implement data modeling for specific business intelligence purposes, such as predicting energy consumption based on weather data or optimizing logistics and transportation operations.
-
-- Improve error handling and exception management in the ETL pipeline to ensure a more robust and reliable data processing workflow.
+## Features
+- Fetches weather data from multiple cities using the OpenWeatherMap API.
+- Processes and harmonizes raw weather data for better analysis and visualization.
+- Stores the harmonized data in a PostgreSQL database.
+- Visualizes weather data (temperature, humidity, and wind speed) using matplotlib.

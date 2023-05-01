@@ -1,8 +1,8 @@
 {
   "location": "Malmo",
-  "weather": "clear sky",
-  "temperature": 8.43,
-  "humidity": 57,
-  "wind_speed": 4.02,
-  "timestamp": 1682794834
+  "weather": "overcast clouds",
+  "temperature": 12.74,
+  "humidity": 69,
+  "wind_speed": 6.35,
+  "timestamp": 1682944607
 }

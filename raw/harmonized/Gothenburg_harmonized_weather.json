@@ -1,8 +1,8 @@
 {
   "location": "Gothenburg",
-  "weather": "moderate rain",
-  "temperature": 8.9,
-  "humidity": 93,
+  "weather": "clear sky",
+  "temperature": 9.39,
+  "humidity": 57,
   "wind_speed": 10.28,
-  "timestamp": 1682954713
+  "timestamp": 1683049723
 }

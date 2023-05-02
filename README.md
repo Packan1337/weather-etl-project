@@ -19,3 +19,14 @@ The project is organized into several modules:
 - Processes and harmonizes raw weather data for better analysis and visualization.
 - Stores the harmonized data in a PostgreSQL database.
 - Visualizes weather data (temperature, humidity, and wind speed) using matplotlib.
+
+# Installation Guide
+
+This document provides instructions on how to install the required packages for the Weather ETL Pipeline project.
+
+## Prerequisites
+
+Make sure you have Python 3.6 or higher installed on your system. You can verify the installed version by running the following command in your terminal:
+
+```bash
+python --version

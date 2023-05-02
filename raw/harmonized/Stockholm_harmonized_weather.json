@@ -1,8 +1,8 @@
 {
   "location": "Stockholm",
-  "weather": "light rain",
-  "temperature": 5.72,
-  "humidity": 90,
-  "wind_speed": 3.6,
-  "timestamp": 1682954913
+  "weather": "clear sky",
+  "temperature": 8.7,
+  "humidity": 56,
+  "wind_speed": 3.09,
+  "timestamp": 1683049433
 }

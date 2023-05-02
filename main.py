@@ -1,17 +1,19 @@
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 from data_etl_process import *
 from database_converter import *
 
-load_dotenv()
+load_dotenv(find_dotenv())
+
 
 # OpenWeatherMap API key and locations
-API_KEY = os.getenv("OPENWEATHERMAP_API_KEY")
+API_KEY = os.getenv("OPENWEATHER_API_KEY")
+print(f"Loaded API key: {API_KEY}")
 LOCATIONS = ["Stockholm", "Gothenburg", "Malmo",
              "Uppsala", "Vasteras", "Bollnas", "Kiruna"]
 
 # PostgreSQL database credentials
 # These credentials are stored in a .env file, which is not included in the repository
-database = os.getenv("POSTGRES_DB")
+database = os.getenv("POSTGRES_DATABASE")
 user = os.getenv("POSTGRES_USER")
 password = os.getenv("POSTGRES_PASSWORD")
 host = os.getenv("POSTGRES_HOST")

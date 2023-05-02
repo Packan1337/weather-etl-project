@@ -1,6 +1,6 @@
-# 🌦️ Weather Data Analysis Pipeline
+# 🌦️ Weather Data Analysis Pipeline *(ETL)*
 ### 👥 Group Members
-- Aria Kalantari (elite code master)
+- Aria Kalantari *(elite programmer, no errors ever)*
 
 ### 📚 Project Overview
 The Weather Data Analysis Pipeline is a Python-based project that retrieves, processes, and visualizes weather data from multiple cities using the OpenWeatherMap API. The pipeline is comprised of several steps, including data extraction, transformation, loading into a PostgreSQL database, and visualization using matplotlib.
@@ -19,8 +19,9 @@ The project is organized into several modules:
 - Processes and harmonizes raw weather data for better analysis and visualization.
 - Stores the harmonized data in a PostgreSQL database.
 - Visualizes weather data (temperature, humidity, and wind speed) using matplotlib.
+<br>
 
-## 💻 Installation Guide
+# 💻 Installation Guide
 
 This document provides instructions on how to install the required packages for the Weather ETL Pipeline project.
 

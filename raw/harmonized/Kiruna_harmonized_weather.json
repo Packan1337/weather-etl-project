@@ -1,8 +1,8 @@
 {
   "location": "Kiruna",
-  "weather": "light snow",
+  "weather": "broken clouds",
   "temperature": -2.49,
-  "humidity": 86,
-  "wind_speed": 5.14,
-  "timestamp": 1683049971
+  "humidity": 50,
+  "wind_speed": 7.72,
+  "timestamp": 1683111600
 }

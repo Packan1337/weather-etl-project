@@ -26,18 +26,16 @@ port = os.getenv("POSTGRES_PORT")
 # The PostgreSQL table is created if it does not already exist
 # The PostgreSQL table is truncated before the new data is inserted
 # # Save the DataFrame to a PostgreSQL table
-def main():
+def run_weather_etl(api_key, database, user, password, host, port, locations):
     all_weather_data = []
 
     # Fetch, parse, and save weather data for each location
-    for location in LOCATIONS:
-        raw_weather_data = fetch_weather_data(API_KEY, location)
-        save_data(raw_weather_data,
-                  f"{location}_weather.json", data_type='raw')
+    for location in locations:
+        raw_weather_data = fetch_weather_data(api_key, location)
+        save_data(raw_weather_data, f"{location}_weather.json", data_type='raw')
         
         harmonized_data = harmonize_weather_data(raw_weather_data)
-        save_data(harmonized_data,
-                  f"{location}_harmonized_weather.json", data_type='harmonized')
+        save_data(harmonized_data, f"{location}_harmonized_weather.json", data_type='harmonized')
 
         weather_dataframe = harmonized_data_to_dataframe(harmonized_data)
         all_weather_data.append(weather_dataframe)
@@ -49,6 +47,5 @@ def main():
 
     save_dataframe_to_postgresql(combined_weather_data, "weather_data", engine)
 
-
 if __name__ == "__main__":
-    main()
+    run_weather_etl(API_KEY, database, user, password, host, port, LOCATIONS)

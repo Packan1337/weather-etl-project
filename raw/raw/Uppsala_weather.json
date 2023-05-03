@@ -14,27 +14,27 @@
   "base": "stations",
   "main": {
     "temp": 8.69,
-    "feels_like": 5.7,
+    "feels_like": 6.33,
     "temp_min": 8.69,
     "temp_max": 8.73,
-    "pressure": 1015,
+    "pressure": 1022,
     "humidity": 46
   },
   "visibility": 10000,
   "wind": {
-    "speed": 5.66,
-    "deg": 290
+    "speed": 4.12,
+    "deg": 330
   },
   "clouds": {
     "all": 0
   },
-  "dt": 1683050073,
+  "dt": 1683111909,
   "sys": {
     "type": 1,
     "id": 1731,
     "country": "SE",
-    "sunrise": 1682995510,
-    "sunset": 1683053204
+    "sunrise": 1683081749,
+    "sunset": 1683139753
   },
   "timezone": 7200,
   "id": 2666218,
